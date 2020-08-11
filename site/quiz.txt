@@ -1,0 +1,36 @@
+Quiz
+
+1-As partes físicas do microcomputador só funcionam de maneira lógica quando executam ordens contidas em um programa ou em um conjunto de programas. A parte composta pelos programas - que transforma as partes físicas do microcomputador em uma unidade lógica de processamento-é chamada de
+	?	HARDWARE
+	?	SOFTWARE
+	?	SELFWARE
+	?	NETWARE
+	?	FIRMWARE
+
+2-As imagens em sites às vezes aparecem tão rápido, por quê?
+	?	O servidor que você está acessando está na sua cidade
+	?	Tem pouca gente usando o site
+	?	Sua internet tem uma conexão rápida 
+	?	Seu computador costuma guardar num lugar chamado “cachê”, as imagens que você busca costumeiramente?
+	?	Seu computador é bom
+
+3-Qual extensão abaixo designa um arquivo de imagem?
+	?	AVI
+	?	JPEG?
+	?	MP4
+	?	MP2
+	?	3G2
+
+4-Qual a função da memória RAM?
+	?	Armazenar arquivos do sistema.
+	?	Controlar o processador e torná-lo mais eficiente.
+	?	Criar grande capacidade de armazenamento em disco.
+	?	Armazenar dados de programas em execução,aumentando a velocidade do pc
+	?	Aumentar a capacidade de processamento da CPU, tornando mais preciso e eficaz a execução de aplicativos do sistema
+
+5-Qual das alternativas todos os componentes podem ser trocados?
+	?	Teclado,mouse,placa de rede,pixel
+	?	Teclado,mouse,PowerPoint,Firefox
+	?	Pendrive,webcam,antivírus,fone de ouvido 
+	?	Gabinete,fios,mouse
+	?	Caixa de som,Excel,monitor

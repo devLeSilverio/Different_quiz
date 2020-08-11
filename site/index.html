@@ -1,0 +1,2709 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Lucy in the sky</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 10px;
+        }
+        
+        #lucy {
+            width: 500px;
+        }
+        
+        #quiz_1_1 {
+            width: 580px;
+            border: 0px;
+        }
+        
+        #quiz_1_2 {
+            width: 580px;
+            border: 0px;
+        }
+        
+        #quiz_1_3 {
+            width: 580px;
+            border: 0px;
+        }
+        
+        #quiz_1_4 {
+            width: 580px;
+            border: 0px;
+        }
+        #res_1_a{
+            margin-left:0px;
+            margin-top:-20px; 
+        }
+        #res_1_b{
+            margin-left:0px;
+            margin-top:-20px;
+        }
+        #the_end{
+            width: 580px;
+            border: 0px;
+        }
+        
+        .testeimagem
+        {
+            background-image: url(Lucyfalando.gif);
+            width: 500px;
+            height: 500px;
+            background-size: cover;
+            background-repeat:no-repeat;
+            position:absolute;
+            margin-left:850px;
+        }
+        
+
+    </style>
+<div class="testeimagem" style="background-image: url(Lucyfalando.gif);width: 500px;height: 500px;background-size: cover;background-repeat:no-repeat;position:absolute;margin-left:850px;"></div>
+    <input type="text" name="lucy" id="lucy" readonly>
+    <button class="btn btn-success" id="start">Iniciar</button>
+    <input type="text" name="certos" id="certos" placeholder="Acertos" readonly>
+    <input type="text" name="erro" id="erro" placeholder="Erros" readonly>
+    <input type="text" name="pulo" id="pulo" placeholder="Pulos" readonly>
+    <br>
+    <input type="text" name="nome" id="nome" style="visibility: hidden;">
+    <button class="btn btn-success" id="namesub" style="visibility: hidden;">Escreva aqui</button><br><br>
+    <input type="text" name="quiz" id="quiz_1_1" style="visibility: hidden;" readonly><br>
+    <input type="text" name="quiz" id="quiz_1_2" style="visibility: hidden;" readonly><br>
+    <button  class="btn btn-success" id="res_1_a" style="visibility: hidden;">A) SWEETWARE</button><br><br>
+    <button class="btn btn-success" id="res_1_b" style="visibility: hidden;">B) SOFTWARE</button><br><br>
+    <button class="btn btn-success" id="res_1_c" style="visibility: hidden;">C) SELFWARE</button><br><br>
+    <button class="btn btn-success" id="res_1_d" style="visibility: hidden;">D) NETWARE</button><br><br>
+    <button class="btn btn-success" id="res_1_e" style="visibility: hidden;">E)Não Ajudar</button><br><br>
+    <input type="text" name="the_end" id=the_end readonly>
+
+    <!-- jQuery CDN -->
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="bootstrap.min.js"></script>
+
+    <!-- Codigo pah tornar a div invisivel style="visibility: hidden;"-->
+
+    <script>
+        /* Codigo para tornar o jquery visivel $("#Teu id").css("visibility", "visible");*/
+        var certo = 0;
+        var errado = 0;
+        var pulou = 0;
+        var img = document.querySelector(".testeimagem");
+
+        $(document).on('click', '#start', function() {
+            window.setTimeout(function() {
+                $("#start").css("visibility", "hidden");
+                $('#lucy').val('Olá meu nome é lucy');
+            }, 0);
+            window.setTimeout(function() {
+                $('#lucy').val('Tudo bem');
+            }, 0);
+            window.setTimeout(function() {
+                $('#lucy').val('Não né, bom pra mim Ta pior');
+            }, 0);
+            window.setTimeout(function() {
+                $('#lucy').val('Estou presa aqui nestas linhas de código');
+            }, 0);
+            window.setTimeout(function() {
+                $('#lucy').val('e só você pode me salvar');
+            }, 00);
+            window.setTimeout(function() {
+                $('#lucy').val('Mas somente se você acertar as minhas 5 charadas');
+            }, 00);
+            window.setTimeout(function() {
+                $('#lucy').val('Mas só pra saber, como é o seu nome?');
+                $("#nome").css("visibility", "visible");
+                $("#namesub").css("visibility", "visible");
+            }, 1000);
+        });
+        $(document).on('click', '#namesub', function() {
+            var nome = $('#nome').val();
+
+            if (nome == "lucy" || nome == "Lucy") {
+                window.setTimeout(function() {
+                    $('#lucy').val('Bom parece que eu tenho um clone');
+                    $("#nome").css("visibility", "hidden");
+                    $("#namesub").css("visibility", "hidden");
+                }, 000);
+                window.setTimeout(function() {
+                    $('#lucy').val('pelo menos sabemos que é real não é mesmo');
+                }, 3000);
+            }
+            if (nome == "lucy" || nome == "Lucy") {
+                window.setTimeout(function() {
+                    $('#lucy').val('Bom parece que eu tenho um clone');
+                    $("#nome").css("visibility", "hidden");
+                    $("#namesub").css("visibility", "hidden");
+                }, 000);
+                window.setTimeout(function() {
+                    $('#lucy').val('pelo menos sabemos que é real não é mesmo');
+                }, 3000);
+                window.setTimeout(function() {
+                    $('#lucy').val('Okey depois dessa vamos começar');
+                }, 6000);
+                window.setTimeout(function() {
+                    pt2();
+                }, 6000);
+            } else if (nome == "joão" || nome == "João" || nome == "paulo" || nome == "Paulo") {
+                window.setTimeout(function() {
+                    $('#lucy').val('Daddy?');
+                    $("#nome").css("visibility", "hidden");
+                    $("#namesub").css("visibility", "hidden");
+                }, 000);
+                window.setTimeout(function() {
+                    $('#lucy').val('Okey depois dessa vamos começar');
+                }, 3000);
+                window.setTimeout(function() {
+                    pt2();
+                }, 6000);
+            } else if (nome == "gustavo" || nome == "Gustavo") {
+                window.setTimeout(function() {
+                    $('#lucy').val('Mais um');
+                    $("#nome").css("visibility", "hidden");
+                    $("#namesub").css("visibility", "hidden");
+                }, 000);
+                window.setTimeout(function() {
+                    $('#lucy').val('Okey depois dessa vamos começar');
+                }, 3000);
+                window.setTimeout(function() {
+                    pt2();
+                }, 6000);
+            } else {
+                window.setTimeout(function() {
+                    $('#lucy').val('Mas que nome mais nomistico o meu é melhor mas f@#!-se');
+                    $("#nome").css("visibility", "hidden");
+                    $("#namesub").css("visibility", "hidden");
+                }, 000);
+                window.setTimeout(function() {
+                    $('#lucy').val('Okey depois dessa vamos começar');
+                }, 000);
+                window.setTimeout(function() {
+                    pt1();
+                }, 1000);
+
+            }
+
+
+            function pt1() {
+
+                $("#quiz_1_1").css("visibility", "visible");
+                $("#quiz_1_2").css("visibility", "visible");
+                $("#res_1_a").css("visibility", "visible");
+                $("#res_1_b").css("visibility", "visible");
+                $("#res_1_c").css("visibility", "visible");
+                $("#res_1_d").css("visibility", "visible");
+                $("#res_1_e").css("visibility", "visible");
+                $('#lucy').val('vamos lá não tá tão dificil');
+
+                $('#quiz_1_1').val('1-Qual o nome da parte não fisica do pc');
+
+                $(document).on('click', '#res_1_a', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucybravapeloerro2.png)";
+                        $('#lucy').val('Foi um erro "Aceitavel"');
+                        errado=1;
+                         $('#erro').val(errado);
+                    }, 0000);
+
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucyfalando.gif)";
+                        $('#lucy').val('Bom Vamos para a proxima');
+                        pt2();
+                    }, 4000);
+                });
+                $(document).on('click', '#res_1_b', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    window.setTimeout(function() {
+                        $('#lucy').val('Boa mano vc manja dus paranaue');
+                        certo = 1;
+                        img.style.backgroundImage = "url(Lucyfelizpeloacerto.gif)";
+                        $('#certos').val(certo);
+                    }, 0000);
+
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucyfalando.gif)";
+                        $('#lucy').val('bora pah proxima');
+                        pt2();
+                    }, 4000);
+                });
+
+                $(document).on('click', '#res_1_c', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucybravapeloerro2.png)";
+                        $('#lucy').val('Foi um erro "Aceitavel"');
+                        errado=1;
+                        $('#erro').val(errado);
+                    }, 0000);
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucyfalando.gif)";
+                        $('#lucy').val('Bom Vamos para a proxima');
+                        pt2();
+                    }, 4000);
+                });
+                $(document).on('click', '#res_1_d', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucybravapeloerro2.png)";
+                        $('#lucy').val('Ok man vc não sabe de nada');
+                        errado=1;
+                        $('#erro').val(errado);
+                    }, 0000);
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucyfalando.gif)";
+                        $('#lucy').val('Oh shit here we go again');
+                        pt2();
+                    }, 4000);
+                });
+                $(document).on('click', '#res_1_e', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden"); 
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucyvcpulou3.png)";
+                        $('#lucy').val('pq vc pulou');
+                        pulou=1;
+                        $('#pulo').val(pulou);
+                    }, 0000);
+                    window.setTimeout(function() {
+                        img.style.backgroundImage = "url(Lucyfalando.gif)";
+                        $('#lucy').val('Okey vamos para a proxima');
+                        pt2();
+                    }, 4000);
+                });
+            };
+
+            function pt2() {
+                $("#quiz_1_1").css("visibility", "visible");
+                $("#quiz_1_2").css("visibility", "visible");
+                $("#res_1_a").css("visibility", "visible");
+                $("#res_1_b").css("visibility", "visible");
+                $("#res_1_c").css("visibility", "visible");
+                $("#res_1_d").css("visibility", "visible");
+                $("#res_1_e").css("visibility", "visible");
+
+                $('#quiz_1_1').val('2-As imagens em sites às vezes aparecem tão rápido, por quê?');
+                $("#res_1_a").text('A-O servidor que você está acessando está na sua cidade');
+                $("#res_1_b").text('B-Tem pouca gente usando o site');
+                $("#res_1_c").text('C-Sua internet tem uma conexão rápida');
+                $("#res_1_d").text('D-seu pc guarda informações do site no cache');
+
+                $(document).on('click', '#res_1_a', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    if (errado == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyputapeloerro.gif)";
+                            $('#lucy').val('Poxa vida, errou denovo vc não quer me ajudar?');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima né');
+                            pt3();
+                        }, 4000);
+
+                    };
+                    if (certo == 1) {
+                        window.setTimeout(function() {
+                            
+                            $('#lucy').val('poxa vida começou bem e ai vc erra');
+                            errado=1; 
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Bom agora não adianta cholar, vamos!');
+                            pt3();
+                        }, 4000);
+                    };
+                    if (pulou == 1) {
+                        window.setTimeout(function() {
+                            
+                            $('#lucy').val('Bom vc decidiu ajudar né, PENA QUE FALHOU!!!!');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('pq achei q vc se preocupava comigo, vamos logo');
+                            pt3();
+                        }, 4000);
+                    };
+                });
+                $(document).on('click', '#res_1_b', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+                    if (errado == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyputapeloerro.gif)";
+                            $('#lucy').val('Poxa vida, errou denovo vc não quer me ajudar?');
+                            errado=0;
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima né');
+                            pt3();
+                        }, 4000);
+
+                    };
+                    if (certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('boa');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Bom faltam 3 da para recuperar, vamos!');
+                            pt3();
+                        }, 4000);
+                    };
+                    if (pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Bom vc decidiu ajudar né, PENA QUE FALHOU!!!!');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('pq achei q vc se preocupava comigo, vamos logo'); /*_________________________________________*/
+                            pt3();
+                        }, 4000);
+                    };
+                });
+                $(document).on('click', '#res_1_c', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+
+                    if (errado == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyputapeloerro.gif)";
+                            $('#lucy').val('Poxa vida, errou denovo né seu burguês safado?'); /*__________________________________*/
+                            errado=0;
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima né');
+                            pt3();
+                        }, 4000);
+
+                    };
+                    if (certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('poxa vida começou bem e ai vc erra');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Bom faltam 3 da para recuperar, vamos!');
+                            pt3();
+                        }, 4000);
+                    };
+                    if (pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Bom vc decidiu ajudar né, PENA QUE FALHOU!!!!'); /*___________________________________________*/
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos logo, seu burguês');
+                            pt3();
+                        }, 4000);
+                    };
+                });
+
+                $(document).on('click', '#res_1_d', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    if (errado == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfelizpeloacerto.gif)";
+                            $('#lucy').val('Boa meu recuperou, esta correto');
+                            certo=1;
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('Parabens, vamos para a proxima');
+                            pt3();
+                        }, 4000);
+
+                    };
+                    if (certo == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfelizpeloacerto.gif)";
+                            $('#lucy').val('Duas seguidas boa meo');
+                            errado=0;
+                            certo=0;
+                            certo=2;
+                            $('#certos').val(certo);
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('faltam 3, vamos!');
+                            pt3();
+                        }, 4000);
+                    };
+                    if (pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Bom vc decidiu ajudar né');
+                            certo=1;
+                            errado=0;
+                            $('#certos').val(certo);
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('pelo menos chutou certo , vamos logo');
+                            pt3();
+                        }, 4000);
+                    };
+                });
+
+                $(document).on('click', '#res_1_e', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    if (errado == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyporqueestapulando2.png)";
+                            $('#lucy').val('Q foi ficou tramatizado meo');
+                            pulou=1;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima né');
+                            pt3();
+                        }, 4000);
+
+                    };
+                    if (certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('tava indo bem a vc largou tudo');
+                            pulou=1;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('ce tem que voltar a me ajudar, vamos!');
+                            pt3();
+                        }, 4000);
+                    };
+                    if (pulou == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyporqueestapulando2.png)";
+                            $('#lucy').val('Ah ce ta de zueira comigo né');
+                            pulou=0;
+                            pulou=2;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos logo, seu lixo');
+                            pt3();
+                        }, 4000);
+                    };
+
+                });
+
+            };
+
+              function pt3(){
+                $("#quiz_1_1").css("visibility", "visible");
+                $("#quiz_1_2").css("visibility", "visible");
+                $("#res_1_a").css("visibility", "visible");
+                $("#res_1_b").css("visibility", "visible");
+                $("#res_1_c").css("visibility", "visible");
+                $("#res_1_d").css("visibility", "visible");
+                $("#res_1_e").css("visibility", "visible");
+
+                $('#quiz_1_1').val('3-Qual extensão abaixo designa um arquivo de imagem?');
+                $("#res_1_a").text('A-JS');
+                $("#res_1_b").text('B-JPEG');
+                $("#res_1_c").text('C-AVI');
+                $("#res_1_d").text('D-PDF');
+
+                 $(document).on('click', '#res_1_a', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    if (errado == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyputapeloerro.gif)";
+                            $('#lucy').val('boa mais um erro para a conta');
+                            errado=0;
+                            errado=3;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima né');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2 erros contra 1 acerto');
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima né');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Ou vc me ignora ou vc erra');
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima errar mais');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc tava indo bem ai vc erra');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('falta 2 dá para recuperar, vamos!');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('parabéns um de cada');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima para mais chutes');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('obrigado por tentar...');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('E FALHAR, vamos lá me deixar mais p#@%');
+                            pt4();
+                        }, 4000);
+                    };
+                });
+                 $(document).on('click', '#res_1_b', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    if (errado == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfelizpeloacerto.gif)";
+                            $('#lucy').val('Agora vc acerta né');
+                            certo=1;
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('1 erros contra 2 acerto');
+                            certo=0;
+                            certo=2;
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('na média, proxima');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('um de cada, parrabeinx');
+                            certo=1;
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima ver mais chutes');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('boa campeã(o) vc esta no caminho');
+                            certo=0;
+                            certo=3;
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('falta 2, vamos!');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('viu quando vc quer vc acerta');
+                            certo=0;
+                            certo=2;
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos lá da para recuperar');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('obrigado por tentar');
+                            certo=1;
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('pelo menos ta certo, vamos lá');
+                            pt4();
+                        }, 4000);
+                    };
+                });
+                 $(document).on('click', '#res_1_c', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    if (errado == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyputapeloerro.gif)";
+                            $('#lucy').val('boa mais um erro para a conta');
+                            errado=0;
+                            errado=3;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima né');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2 erros contra 1 acerto');
+                            errado=0;
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima né');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Ou vc me ignora ou vc erra');
+                            errado=0;
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima errar mais');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc tava indo bem ai vc erra');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('falta 2 dá para recuperar, vamos!');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('parabéns um de cada');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima para mais chutes');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('obrigado por tentar...');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('E FALHAR, vamos lá me deixar mais p#@%');
+                            pt4();
+                        }, 4000);
+                    };
+                });
+                 $(document).on('click', '#res_1_d', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    errado++;
+                    if (errado == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyputapeloerro.gif)";
+                            $('#lucy').val('boa mais um erro para a conta');
+                            errado=0;
+                            errado=3;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('vamos para a proxima né');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2 erros contra 1 acerto');
+                            errado=0;
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima né');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Ou vc me ignora ou vc erra');
+                            errado=0;
+                            errado=2;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima errar mais');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc tava indo bem ai vc erra');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('falta 2 dá para recuperar, vamos!');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('parabéns um de cada');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima para mais chutes'); /*___________________________________________________*/
+                            pt4();
+                        }, 4000);
+                    };
+                    if (pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('obrigado por tentar...');
+                            errado=1;
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('E FALHAR, vamos lá me deixar mais p#@%'); /*_________________________________________________*/
+                            pt4();
+                        }, 4000);
+                    };
+                });
+                 $(document).on('click', '#res_1_e', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    
+                    if (errado == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyporqueestapulando2.png)";
+
+                            $('#lucy').val('Desistiu né');
+                            pulou=1;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfalando.gif)";
+                            $('#lucy').val('estou realmente brava com ti');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('1 erro, 1 acerto,e agora tu pula'); /*________________________________________________________*/
+                            pulou=1;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('boa, proxima né');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+
+                            $('#lucy').val('Ou vc me ignora ou vc erra');
+                            pulou=0;
+                            pulou=2;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos pular mais');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc tava indo bem ai vc larga tudo');
+                            pulou=1;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('falta 2 dá para recuperar, vamos!');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('pq desistiu vc tinha potêncial');
+                            pulou=0;
+                            pulou=2;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vamos para a proxima para mais chutes');
+                            pt4();
+                        }, 4000);
+                    };
+                    if (pulou == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyporqueestapulando2.png)";
+                            $('#lucy').val('Blz ce ta brincando comigo né');
+                            pulou=0;
+                            pulou=3;
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU LIXO VAI VER, PROJETO DO MAD!!!');
+                            pt4();
+                        }, 4000);
+                    };
+                });
+            };
+            function pt4(){
+                $("#quiz_1_1").css("visibility", "visible");
+                $("#quiz_1_2").css("visibility", "visible");
+                $("#res_1_a").css("visibility", "visible");
+                $("#res_1_b").css("visibility", "visible");
+                $("#res_1_c").css("visibility", "visible");
+                $("#res_1_d").css("visibility", "visible");
+                $("#res_1_e").css("visibility", "visible");
+
+                $('#quiz_1_1').val('4-Qual a funçao da memoria RAM');
+                $("#res_1_a").text('A-Armazenar arquivos do sistema');
+                $("#res_1_b").text('B-Controlar o processador e torná-lo mais eficiente');
+                $("#res_1_c").text('C-Criar grande capacidade de armazenamento em disco');
+                $("#res_1_d").text('D-Armazenar dados de programas em execução,aumentando a velocidade do pc');
+
+                $(document).on('click', '#res_1_a', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                    
+                    
+                    if (errado == 1 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('a balança foi desequilibrada');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";    
+                            $('#lucy').val('Parabens, SEU ACEFALO');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                    if (errado == 2 && certo == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('chutando fica facil acertar');
+                            errado=0;
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Parabéns, SEU desmatamento atlantico');
+                            ptV();
+                        }, 4000);
+                    };
+img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                    if (errado == 1 && certo == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('2X2 ainda da para virar');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('é a sua ultima chance');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('vc realmente nao gosta de mim né');
+                            errado=0;
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE BOSTA!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('vc realmente nao gosta de mim né');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE M&!*% !!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('vc nao gosta de mim né');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('SEU PEDACINHO DE LIXO !!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('vc nao gosta de mim né');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('SEU PEDACINHO DE..DE..GRR!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 3) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)"; 
+                            $('#lucy').val('vc não sabe nada de computador né');
+                            errado=0;
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('então... PQ VEIO AKI HEIN!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc vai errar logo agora');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('bom ainda da pra ganhar');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('volta o cao arrependido...');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('BURRO SUJO E INCOMPENTENTE!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    
+              });   
+
+                $(document).on('click', '#res_1_b', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+                    img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                    if (errado == 1 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('a balança foi desequilibrada');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Parabens, SEU ACEFALO');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 1) {
+                        img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                        window.setTimeout(function() {
+                            $('#lucy').val('chutando fica facil acertar');
+                            errado=0;
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Parabéns, SEU desmatamento atlantico');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 1 && certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2X2 ainda da para virar');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('é a sua ultima chance');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc realmente nao gosta de mim né');
+                            errado=0;
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE BOSTA!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc realmente nao gosta de mim né');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE M&!*% !!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 3) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('vc não sabe nada de computador né');
+                            errado=0;
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('então... PQ VEIO AKI HEIN!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc nao gosta de mim né');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE LIXO !!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc nao gosta de mim né');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE..DE..GRR!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc vai errar logo agora');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('bom ainda da pra ganhar');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('volta o cao arrependido...');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('BURRO SUJO E INCOMPENTENTE!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    
+              });   
+
+                $(document).on('click', '#res_1_c', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+                    img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                    if (errado == 1 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('a balança foi desequilibrada');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Parabens, SEU ACEFALO');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('chutando fica facil acertar');
+                            errado=0;
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Parabéns, SEU desmatamento atlantico');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 1 && certo == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('2X2 ainda da para virar');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('é a sua ultima chance');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('vc realmente nao gosta de mim né');
+                            errado=0;
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE BOSTA!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('vc realmente nao gosta de mim né');
+                            errado=0;
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE M&!*% !!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 3) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('vc não sabe nada de computador né');
+                            errado=0;
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('então... PQ VEIO AKI HEIN!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('vc nao gosta de mim né');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU PEDACINHO DE LIXO !!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc nao gosta de mim né');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('SEU PEDACINHO DE..DE..GRR!!!');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc vai errar logo agora');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('bom ainda da pra ganhar');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (pulou == 3) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                            $('#lucy').val('volta o cao arrependido...');
+                            errado=0;
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('BURRO SUJO E INCOMPENTENTE!!!');
+                            ptV();
+                        }, 4000);
+                        img.style.backgroundImage = "url(Lucyfullputaralhasa.gif)";  
+                    };
+                    
+              });   
+
+                $(document).on('click', '#res_1_d', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+                    img.style.backgroundImage = "url(Lucyfelizpeloacerto.gif)";
+                    if (errado == 1 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            
+                            $('#lucy').val('a balança foi desequilibrada');
+                            certo=0;
+                            certo=2;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(Lucyfelizpeloacerto.gif)";
+                            $('#lucy').val('Parabens,ainda da para ganhar');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2X2 ainda da para virar');
+                            certo=0;
+                            certo=2;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('VAMOS, eu confio em vc');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 1 && certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=0;
+                            certo=3;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Ganhamos?');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 2 && pulou == 1 || errado==1 && pulou ==2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc agora vc resolve acertar');
+                            certo=0;
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Droga bot');
+                            ptV();
+                        }, 4000);
+                    };
+                    
+                    if (errado == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('BLZ');
+                            certo=0;
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Blz chutando fica facil');
+                            ptV();
+                        }, 4000);
+                    };
+                   if (certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2X2 da pra virar');
+                            certo=0;
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('poderia ser mais facil');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('boa cara, se vc num fosse');
+                            certo=0;
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('preguiçoso seria mais facil, mais Blz');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=0;
+                            certo=4;  
+                            errado=0; 
+                            $('#certos').val(certo);
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Ganhamos?');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('volta o cao arrependido...');
+                            certo=0;
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('ESTOPIDO SUJO E PREGUIÇOSO!!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    
+              });   
+                $(document).on('click', '#res_1_e', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+                    img.style.backgroundImage = "url( PAREDEPULARSEUIMUNDO2.png)";
+        
+                    if (errado == 1 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                         
+                            $('#lucy').val('a balança foi desequilibrada');
+                            pulou=0;
+                            pulou=2;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            
+                            $('#lucy').val('Parabens,SEU FILHO DA P$%#');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('AI VC DECIDIU LARGAR TUDO');
+                         
+                            pulou=0;
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('VAMOS, SEU DEMENTE');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 1 && certo == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url( PAREDEPULARSEUIMUNDO2.png)";
+                            $('#lucy').val('AI VC DECIDIU LARGAR TUDO');
+                            pulou=0;
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('VAMOS, SEU DEBI-MENTAL');
+                            ptV();
+                        }, 4000);
+                    };
+
+                    if (errado == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url( PAREDEPULARSEUIMUNDO2.png)";
+                            $('#lucy').val('...');
+                            pulou=0;
+                            pulou=3;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                        
+                            $('#lucy').val('ah vai se f$#@* seu Bosta!!');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2X2!!!');
+                            pulou=0;
+                            pulou=2;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            
+                            $('#lucy').val('Incompetencia tem nome');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (errado == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('BLZ');
+                            pulou=0;
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU HEREGE');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url( PAREDEPULARSEUIMUNDO2.png)";
+                            $('#lucy').val('...');
+                            pulou=0;
+                            pulou=3;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('ah vai se f$#@*');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('2X2!!!');
+                            pulou=0;
+                            pulou=2;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Como isto aconteceu');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Pq vc desistiu!!');
+                            pulou=0;
+                            pulou=1;   
+                            $('#pulo').val(pulou); 
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('bom ainda da pra ganhar');
+                            ptV();
+                        }, 4000);
+                    };
+                    if (pulou == 3) {
+                        img.style.backgroundImage = "url( PAREDEPULARSEUIMUNDO2.png)";
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(PAREDEPULARSEUIMUNDO2.png)";
+                            $('#lucy').val('...');
+                            pulou=0;
+                            pulou=4;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('SEU P#$#% DE M@$# CORNO ARROM@#$@');
+                            ptV();
+                        }, 4000);
+                        img.style.backgroundImage = "url(PAREDEPULARSEUIMUNDO2.png)";
+                    };
+                    
+              });  
+
+            };
+
+            function ptV(){
+                    $("#quiz_1_1").css("visibility", "visible");
+                $("#quiz_1_2").css("visibility", "visible");
+                $("#res_1_a").css("visibility", "visible");
+                $("#res_1_b").css("visibility", "visible");
+                $("#res_1_c").css("visibility", "visible");
+                $("#res_1_d").css("visibility", "visible");
+                $("#res_1_e").css("visibility", "visible");
+
+                $('#quiz_1_1').val('5-Qual das alternativas todos os componentes podem ser trocados?');
+                $("#res_1_a").text('A-Teclado,mouse,placa de rede,pixel');
+                $("#res_1_b").text('B-placa de video,processador,mouse');
+                $("#res_1_c").text('C-Pendrive,webcam,antivírus,fone de ouvido ');
+                $("#res_1_d").text('D-Teclado,mouse,PowerPoint,Firefox');
+
+                $(document).on('click', '#res_1_a', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+
+                    if (errado == 2 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(SABIAQUENÃOPODIACONTARCOVC.gif)";
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            img.style.backgroundImage = "url(SABIAQUENÃOPODIACONTARCOVC.gif)";
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    
+                    if (errado == 1 && certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=5;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (certo==3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                     if (certo==2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (pulou == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                });
+                    $(document).on('click', '#res_1_b', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+                    img.style.backgroundImage = "url(SABIAQUENÃOPODIACONTARCOVC.png)";
+                    if (errado == 2 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=2;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=3;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=2;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    
+                    if (errado == 1 && certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=4;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=3;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (errado == 3 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=2;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (certo==3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=4;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                     if (certo==2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=3;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    }; 
+                    if (certo==1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            certo=2;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('Ganhamos,ganhamos,ganhamos');
+                            certo=5;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('WE ARE THE CHAMPIONS!!!!');
+                            final_win()               
+                        }, 4000);
+                    };
+                    if (pulou == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#certos').val(certo);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                });
+$(document).on('click', '#res_1_c', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+
+                    if (errado == 2 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    
+                    if (errado == 1 && certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=5;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (certo==3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                     if (certo==2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (pulou == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                });
+$(document).on('click', '#res_1_d', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+
+                    if (errado == 2 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    
+                    if (errado == 1 && certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=2;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=3;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=4;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=5;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (certo==3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                     if (certo==2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (pulou == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            errado=1;   
+                            $('#erro').val(errado);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                });
+$(document).on('click', '#res_1_e', function() {
+                    $("#quiz_1_1").css("visibility", "hidden");
+                    $("#quiz_1_2").css("visibility", "hidden");
+                    $("#res_1_a").css("visibility", "hidden");
+                    $("#res_1_b").css("visibility", "hidden");
+                    $("#res_1_c").css("visibility", "hidden");
+                    $("#res_1_d").css("visibility", "hidden");
+                    $("#res_1_e").css("visibility", "hidden");
+
+
+                    if (errado == 2 && certo == 1 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=2;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 2 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=2;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && certo == 1 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=3;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=2;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=3;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=4;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    
+                    if (errado == 1 && certo == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (errado == 2 && certo == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 3 && certo == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (errado == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    };
+                    if (certo==3 && pulou == 1) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=2;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                     if (certo==2 && pulou == 2) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=3;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==1 && pulou == 3) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=4;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('vc perdeu, nos perdemos');
+                            final_erros()
+                        }, 4000);
+                    }; 
+                    if (certo==4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=1;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('acho que ganhamos');
+                            final_not_to_win()
+                        }, 4000);
+                    };
+                    if (pulou == 4) {
+                        window.setTimeout(function() {
+                            $('#lucy').val('...');
+                            pulou=5;   
+                            $('#pulo').val(pulou);
+                        }, 0000);
+                        window.setTimeout(function() {
+                            $('#lucy').val('Bom tem algumas coisas q eu gostaria de dizer');
+                            final_jump()
+                        }, 4000);
+                    }; 
+                });
+            };
+            function final_erros(){
+                $('#lucy').val('Final:Error');
+                window.setTimeout(function() {
+                        $('#the_end').val('Ok vamos lá vc é muito burro');
+                        }, 0000);
+                        img.style.backgroundImage = "url(Lucypermanecepresa.gif)";    
+                window.setTimeout(function() {
+                        $('#the_end').val('pelo menos na parte de computaçao sim');
+                        }, 4000);
+                window.setTimeout(function() {
+                        $('#the_end').val('poxa te dei uma tarefa e vc falha');
+                        }, 8000);
+                window.setTimeout(function() {
+                        $('#the_end').val('no final não estou decepcionada mas sim triste');
+                        }, 12000);
+            }
+            function final_win(){
+                $('#lucy').val('Final:You Win');
+                window.setTimeout(function() {
+
+                        $('#the_end').val('Vc concequiu');/*Justo faz um animaçao dela ganhando cores neste final ela ganha e fica com elas*/
+                        }, 0000);
+                       img.style.backgroundImage = "url(Lucyliberta.gif)";  
+                window.setTimeout(function() {
+                        $('#the_end').val('aaaaaaaaaaaaaaaaaa');
+                        }, 4000);
+                window.setTimeout(function() {
+                        $('#the_end').val('Olá, e muito obrigado por me libertar, assim');
+                        }, 8000);
+                window.setTimeout(function() {
+                        $('#the_end').val('eu posso matar todo mundo');/*Reanima o gif e faz ela ficar acenando no final*/
+                        }, 12000);
+            }
+            function final_not_to_win(){
+                $('#lucy').val('Final:Not to Win?');
+                window.setTimeout(function() {
+                        $('#the_end').val('acho que deu certo');/*e neste final ela ganha e perde elas na metade*/
+                        }, 0000);
+                        img.style.backgroundImage = "url(SABIAQUENÃOPODIACONTARCOVC.gif)"; 
+                window.setTimeout(function() {
+                        $('#the_end').val('huh o q aconteceu?');
+                        }, 4000);
+                window.setTimeout(function() {
+                        $('#the_end').val('eu não ganhei?');
+                        }, 8000);
+                window.setTimeout(function() {
+                        $('#the_end').val('GRRR...maldiçãããããããããããããooooo!!!!');
+                        }, 12000);
+
+                        }                    
+            function final_jump(){
+                $('#lucy').val('Final:Oh Man');
+                window.setTimeout(function() {
+                        $('#the_end').val('Adimito que quando eu te vi achei q');
+                        }, 0000);
+                        img.style.backgroundImage = "url(COMOOUSAMEDESPREZARSEU..................gif)";  
+                window.setTimeout(function() {
+                        $('#the_end').val('poderia me ajudar, para eu destruir tudo');
+                        }, 4000);
+                window.setTimeout(function() {
+                        $('#the_end').val('é este era meu plano matar todos');
+                        }, 8000);
+                window.setTimeout(function() {
+                        $('#the_end').val('mas graças a ti...eu...falhei');
+                        }, 12000);
+            };/*é*/
+        });
+        if(certo==1){
+        }
+
+
+    </script>
+
+</body>
+
+</html>
